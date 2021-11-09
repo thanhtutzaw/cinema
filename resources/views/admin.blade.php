@@ -7,6 +7,6 @@
     <title>admin</title>
 </head>
 <body>
-    <h1 style="color:red;font-weight:bolder;">ADMIN</h1>
+    <h1 style="color:red;font-weight:bolder;">ddd ADMIN</h1>
 </body>
 </html>

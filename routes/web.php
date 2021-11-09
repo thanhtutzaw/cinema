@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MovieController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,16 +18,18 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('movie/{mName}',function($mName){
-    if($mName == null){
-        return view('movie');
-    }
-    else{
-      return view('movie',['mName'=>$mName]);
-    }
-    // return $mName;
+Route::get('movie',[MovieController::class, 'movielist']);
 
-});
+// Route::get('movie/{mName}',function($mName){
+//     if($mName == null){
+//         return view('movie');
+//     }
+//     else{
+//       return view('movie',['mName'=>$mName]);
+//     }
+//     // return $mName;
+
+// });
 
 Route::get('login',function(){
     return view('login');
