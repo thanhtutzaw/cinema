@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('child.index');
 });
 
 Route::get('movie',[MovieController::class, 'movielist']);
@@ -32,10 +32,10 @@ Route::get('movie',[MovieController::class, 'movielist']);
 // });
 
 Route::get('login',function(){
-    return view('login');
+    return view('child.login');
 });
 
 Route::get('admin',function(){
-    return view('admin');
+    return view('child.admin');
 });
 

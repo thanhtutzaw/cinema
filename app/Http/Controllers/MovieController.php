@@ -12,7 +12,7 @@ class MovieController extends Controller
     // }
 
     function movielist(){
-        $mLists = ["Venom","No Way Home"];
-        return view('movie', ['movies' => $mLists]) ;   }
+        $mLists = ["Venom","No Way Home","Shan-Chi"];
+        return view('child.movie', ['movies' => $mLists]) ;   }
 
 }
