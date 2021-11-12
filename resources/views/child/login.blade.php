@@ -2,12 +2,12 @@
 @section('subtitle','Login-')
 
 @section('style')
-.container{
+{{-- .container{
     padding:2rem 0 2rem 0;
-}
-form{
+} --}}
+{{-- form{
     margin-top:2rem;
-}
+} --}}
 @endsection
 
 @section('content')
@@ -26,7 +26,7 @@ form{
             <form class="needs-validation" novalidate>
                 <div class="row">
                     <div class="col-9"><input required type="text" class="mb-4 form-control" placeholder="Enter Phone"></div>
-                    <div class="col-3"><button class=" mb-4 form-control-sm btn-outline-dark">Verify</button></div>
+                    <div class="col-3"><button class=" mb-4 btn btn-outline-dark">Verify</button></div>
                 </div>
 
 

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\MovieController;
 use Illuminate\Support\Facades\Route;
 
@@ -35,9 +36,7 @@ Route::get('login',function(){
     return view('child.login');
 });
 
-Route::get('admin',function(){
-    return view('child.admin');
-});
+Route::get('admin',[AdminController::class,'adminPage'])->middleware('testMiddle');
 
 Route::get('bootstrap',function(){
     return view('child.bootstrapRevision');

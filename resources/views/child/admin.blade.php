@@ -3,23 +3,23 @@
 @section('subtitle','Admin-')
 
 @section('style')
-.container{
+{{-- .container{
     padding:2rem 0 2rem 0;
 }
 form{
     margin-top:2rem;
-}
+} --}}
 @endsection
 
 
 @section('content')
 <div class="container text-center">
+<h1>Admin Page</h1>
+    {{-- <div class="row">
+        <div class="col"></div>
 
-    <div class="row">
         <div class="col"></div>
-        <div class="col-5 col-lg-3 col-sm-4"><h1>Admin Page</h1></div>
-        <div class="col"></div>
-    </div>
+    </div> --}}
 
     <div class="row">
         <div class="col"></div>
