@@ -23,16 +23,16 @@ form{
         <div class="col"></div>
 
         <div class="col-5 col-sm-5 col-md-5 col-lg-3 ">
-            <form>
+            <form class="needs-validation" novalidate>
                 <div class="row">
-                    <div class="col-9"><input type="text" class="mb-4 form-control" placeholder="Enter Phone"></div>
+                    <div class="col-9"><input required type="text" class="mb-4 form-control" placeholder="Enter Phone"></div>
                     <div class="col-3"><button class=" mb-4 form-control-sm btn-outline-dark">Verify</button></div>
                 </div>
 
 
 
-                <input type="text" class="mb-4 form-control" placeholder="Verify Code">
-                <button class="form-control btn-success">Login</button>
+                <input required type="text" class="mb-4 form-control" placeholder="Verify Code">
+                <button type="submit" class="form-control btn-success">Login</button>
             </form>
         </div>
 
@@ -44,4 +44,27 @@ form{
 </div>
 
 
+@endsection
+
+
+@section('script')
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
 @endsection

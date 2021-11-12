@@ -39,3 +39,7 @@ Route::get('admin',function(){
     return view('child.admin');
 });
 
+Route::get('bootstrap',function(){
+    return view('child.bootstrapRevision');
+});
+
