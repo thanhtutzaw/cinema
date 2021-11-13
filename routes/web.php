@@ -18,8 +18,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('child.index');
 });
+// Route::get('movie/$id',)
 
+// Route::get('movie/'$id,[MovieController::class, 'movieid']);
+// Route::get('movie/',[MovieController::class,'movieid']);
 Route::get('movie',[MovieController::class, 'movielist']);
+
+Route::get('movie/{id}', function($id){
+    return "Movie Name: ".$id   ;   
+});
 
 // Route::get('movie/{mName}',function($mName){
 //     if($mName == null){

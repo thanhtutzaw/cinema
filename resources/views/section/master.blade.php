@@ -46,12 +46,13 @@
     <div class="container">
         <div class="row">
             @include('section.nav')
+            @yield('content')
         </div>
     </div>
 
 
 
-    @yield('content')
+
 
 
 

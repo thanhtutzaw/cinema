@@ -12,6 +12,16 @@ class MovieController extends Controller
 
     function movielist(){
         $mLists = ["Venom","No Way Home","Shan-Chi"];
-        return view('child.movie', ['movies' => $mLists]) ;   }
+        $id = [1,2,4,5,7,9];
+
+
+        return view('child.movie', ['movies' => $mLists]) ;
+    }
+
+    // function movieid(){
+    //     $id = [1,2,4,5,7,9];
+    //     return view('child.movie'.$id);
+
+    // }
 
 }
